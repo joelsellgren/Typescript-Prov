@@ -2,7 +2,7 @@
 
 type Dictionary = {
     // Index signature ska vara här
- 
+    [index: string]: string
   };
   
   
@@ -16,7 +16,6 @@ type Dictionary = {
     // Implementera funktionen så att den returnerar definitionen av ordet (word) om det finns i ordboken (dictionary).
     // Om ordet inte finns ska funktionen returnera undefined.
   }
-
   
   // Testa funktionerna
   const myDictionary: Dictionary = {};

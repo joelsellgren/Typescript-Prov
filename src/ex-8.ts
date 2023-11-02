@@ -6,6 +6,7 @@
 // 1. Definerier enums för UserRoles Adming, Member och Guest
  enum UserRole {
    // Här...
+   Admin, Member, Guest
   }
   
   interface User {
@@ -14,8 +15,17 @@
   }
   
   // 2. Implementera assignBadgeColor-funktionen som ska returnera en färg baserat på användarens roll.
-  function assignBadgeColor(user: User): string {
+  function assignBadgeColor(user: User): string | undefined {
         // Här...
+      if (user.role === UserRole.Admin) {
+        return 'RED'
+      }
+      if (user.role === UserRole.Member) {
+        return 'BLUE'
+      }
+      if (user.role === UserRole.Guest) {
+        return 'GREEN'
+      }
   }
   
   // Testa funktionen
